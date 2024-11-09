@@ -1,4 +1,4 @@
-package ru.mkilord.walletapi.domen.model;
+package ru.mkilord.walletapi.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

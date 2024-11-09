@@ -1,7 +1,7 @@
-package ru.mkilord.walletapi.adapter.repository;
+package ru.mkilord.walletapi.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.mkilord.walletapi.domen.model.Wallet;
+import ru.mkilord.walletapi.model.Wallet;
 
 import java.util.UUID;
 
