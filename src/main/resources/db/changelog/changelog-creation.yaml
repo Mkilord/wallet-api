@@ -1,0 +1,25 @@
+databaseChangeLog:
+#  - changeSet:
+#      id: 1
+#      author: Mkilord
+#      changes:
+#        - sql:
+#            sql: CREATE SCHEMA IF NOT EXISTS liquibase_schema
+  - changeSet:
+      id: 1
+      author: Mkilord
+      changes:
+        - createTable:
+            schemaName: wallet_schema
+            tableName: wallet
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: balance
+                  type: bigint
+                  constraints:
+                    nullable: false
