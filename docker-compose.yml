@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  wallet-api:
+    env_file:
+      - docker.env
+    image: wallet-api
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - wallet-network
+  db:
+    image: postgres:latest
+    env_file:
+      - docker.env
+    environment:
+      POSTGRES_DB: wallet_db
+    ports:
+      - "5432:5432"
+    networks:
+      - wallet-network
+networks:
+  wallet-network:
+    driver: bridge
