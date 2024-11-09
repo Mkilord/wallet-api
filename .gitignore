@@ -35,3 +35,4 @@ build/
 .vscode/
 /.mvn/wrapper/maven-wrapper.properties
 /.gitattributes
+/docker.env
