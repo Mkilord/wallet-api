@@ -24,7 +24,7 @@ public class WalletService {
 
     @Transactional
     public void updateBalance(UUID walletId, String operationType, long amount) {
-        var wallet = findById(walletId);
+        var wallet = walletRepository.findByIdForUpdate(walletId).orElseThrow(() -> new WalletNotFoundException(walletId));
         if (operationType.equals(WITHDRAW)) {
             withdraw(wallet, amount);
         } else if (operationType.equals(DEPOSIT)) {
