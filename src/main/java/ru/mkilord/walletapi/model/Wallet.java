@@ -11,7 +11,7 @@ import lombok.experimental.FieldDefaults;
 import java.util.UUID;
 
 @Entity
-@Table(name = "wallet")
+@Table(name = "wallet",schema = "wallet_schema")
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Wallet {
